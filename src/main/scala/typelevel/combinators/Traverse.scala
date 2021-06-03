@@ -15,9 +15,10 @@ object Traverse {
     override type Out = F[HNil]
   }
 
-  implicit def singleton[F[_]: Applicative, A, B](implicit F: A -> F[B]): Aux[A :: HNil, F[B :: HNil]] = new Traverse[A :: HNil] {
-    override type Out = F[B :: HNil]
-  }
+  implicit def singleton[F[_]: Applicative, A, B](implicit F: A -> F[B]): Aux[A :: HNil, F[B :: HNil]] =
+    new Traverse[A :: HNil] {
+      override type Out = F[B :: HNil]
+    }
 
   implicit def inductive[F[_]: Applicative, A, B, T <: HList, R <: HList](
       implicit F: A -> F[B],

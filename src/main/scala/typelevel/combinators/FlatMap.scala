@@ -9,9 +9,9 @@ trait FlatMap[L <: HList] {
 }
 
 object FlatMap {
-  def apply[L <: HList](implicit M: FlatMap[L]): Aux[L, M.Out] = M
-
   type Aux[L <: HList, R <: HList] = FlatMap[L] { type Out = R }
+
+  def apply[L <: HList](implicit M: FlatMap[L]): Aux[L, M.Out] = M
 
   implicit def nil: Aux[HNil, HNil] = new FlatMap[HNil] {
     override type Out = HNil

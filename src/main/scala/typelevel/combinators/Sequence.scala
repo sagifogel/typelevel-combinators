@@ -9,9 +9,9 @@ trait Sequence[L <: HList] {
 object Sequence {
   type Aux[L <: HList, R] = Sequence[L] { type Out = R }
 
-  def apply[F[_]: Applicative, L <: HList](implicit S: Sequence[L]): Aux[L, S.Out] = S
+  def apply[L <: HList](implicit S: Sequence[L]): Aux[L, S.Out] = S
 
-  implicit def nil[F[_]: Applicative]: Sequence[HNil] = new Sequence[HNil] {
+  implicit def nil[F[_]: Applicative]: Aux[HNil, F[HNil]] = new Sequence[HNil] {
     override type Out = F[HNil]
   }
 

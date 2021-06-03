@@ -10,9 +10,9 @@ trait Map[L <: HList] {
 }
 
 object Map {
-  def apply[L <: HList](implicit M: Map[L]): Aux[L, M.Out] = M
-
   type Aux[L <: HList, R <: HList] = Map[L] { type Out = R }
+
+  def apply[L <: HList](implicit M: Map[L]): Aux[L, M.Out] = M
 
   implicit def nil: Aux[HNil, HNil] = new Map[HNil] {
     override type Out = HNil
