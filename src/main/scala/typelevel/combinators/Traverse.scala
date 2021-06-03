@@ -2,6 +2,10 @@ package typelevel.combinators
 
 import cats.Applicative
 
+/** type level traverse function representation
+  *
+  * @tparam L HList
+  */
 trait Traverse[L <: HList] {
   type Out
 }

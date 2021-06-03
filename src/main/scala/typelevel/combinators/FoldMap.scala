@@ -2,6 +2,10 @@ package typelevel.combinators
 
 import cats.Monoid
 
+/** type level foldMap function representation
+  *
+  * @tparam L HList
+  */
 trait FoldMap[L <: HList] {
   type Out
 }

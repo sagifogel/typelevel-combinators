@@ -1,7 +1,7 @@
 package typelevel
 package combinators
 
-/** type level Map function representation
+/** type level map function representation
   *
   * @tparam L HList
   */

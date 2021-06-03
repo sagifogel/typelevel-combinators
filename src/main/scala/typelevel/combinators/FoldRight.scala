@@ -2,6 +2,10 @@ package typelevel.combinators
 
 import cats.Eval
 
+/** type level foldRight function representation
+  *
+  * @tparam L HList
+  */
 trait FoldRight[L <: HList] {
   type Out
 }

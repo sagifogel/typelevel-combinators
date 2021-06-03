@@ -1,5 +1,10 @@
 package typelevel.combinators
 
+/** type level ap function representation
+  *
+  * @tparam F HList of functions
+  * @tparam L HList of values
+  */
 trait Ap[F <: HList, L <: HList] {
   type Out
 }

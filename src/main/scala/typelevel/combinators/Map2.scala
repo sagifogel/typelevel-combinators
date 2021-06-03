@@ -1,5 +1,10 @@
 package typelevel.combinators
 
+/** type level map2 function representation
+  *
+  * @tparam L HList
+  * @tparam R HList
+  */
 trait Map2[L <: HList, R <: HList] {
   type Out <: HList
 }

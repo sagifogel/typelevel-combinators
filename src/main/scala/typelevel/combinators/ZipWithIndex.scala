@@ -1,5 +1,9 @@
 package typelevel.combinators
 
+/** type level zipWithIndex function representation
+  *
+  * @tparam L HList
+  */
 trait ZipWithIndex[L <: HList] {
   type Out
 }

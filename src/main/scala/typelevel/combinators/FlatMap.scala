@@ -1,6 +1,6 @@
 package typelevel.combinators
 
-/** type level FlatMap function representation
+/** type level flatMap function representation
   *
   * @tparam L HList
   */

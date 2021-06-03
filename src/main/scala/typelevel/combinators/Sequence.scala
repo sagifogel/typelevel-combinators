@@ -2,6 +2,10 @@ package typelevel.combinators
 
 import cats.Applicative
 
+/** type level sequence function representation
+  *
+  * @tparam L HList
+  */
 trait Sequence[L <: HList] {
   type Out
 }

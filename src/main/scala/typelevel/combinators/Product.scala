@@ -1,5 +1,10 @@
 package typelevel.combinators
 
+/** type level product function representation
+  *
+  * @tparam L HList
+  * @tparam R HList
+  */
 trait Product[L <: HList, R <: HList] {
   type Out <: HList
 }

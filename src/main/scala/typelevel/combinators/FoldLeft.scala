@@ -1,5 +1,9 @@
 package typelevel.combinators
 
+/** type level foldLeft function representation
+  *
+  * @tparam L HList
+  */
 trait FoldLeft[L <: HList] {
   type Out
 }
